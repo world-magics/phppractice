@@ -20,7 +20,7 @@
     <ul>
         <?php foreach($posts as $post):?>
         <li>
-            <h4><?=$post->title ?> </h4>
+          <a href="post.php?id=<?=$post->id?>">  <h4><?=$post->id. '_______> '. $post->title ?> </h4></a>
             <p><?=$post->body?></p>
         </li>
         <?php endforeach; ?>
