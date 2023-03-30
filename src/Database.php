@@ -13,7 +13,7 @@
             $this->password=$password;
             $this->database=$database;
 
-           return $this->connect();
+            $this->connect();
         }
         public function connect(){
             try {
@@ -27,7 +27,7 @@
                 echo "Connection failed: " . $e->getMessage();
                 }
         }
-
+        
 
     }
 

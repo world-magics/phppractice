@@ -2,6 +2,8 @@
     require_once 'bootstrap.php';
     
     $posts=Post::getAll();
+    
+    // var_dump($posts);
 
 ?>
 
@@ -15,5 +17,13 @@
 </head>
 <body>
     <h1>OOP Blog</h1>
+    <ul>
+        <?php foreach($posts as $post):?>
+        <li>
+            <h4><?=$post->title ?> </h4>
+            <p><?=$post->body?></p>
+        </li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 </html>

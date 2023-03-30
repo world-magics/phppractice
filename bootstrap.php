@@ -1,7 +1,9 @@
 <?php
     require_once 'autoload.php';
-    $conn=new Database('127.0.0.1','Vlog','root','');
-
-    echo 'Success Connected';
-    Post::$pdo=$conn;
+     
+    $database=new Database('127.0.0.1','Vlog','root','');
+    $pdo=$database->connect();
+    Post::$pdo=$pdo;
+    // echo "connect succes";
+    // var_dump($posts->title);
 ?>
